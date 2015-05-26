@@ -15,6 +15,12 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     // Parsing JSON with SwiftyJSON Library --> allows you to eliminate all those nil checks
+        // 1. create JSON constant via the JSON() init method and your data object
+            // Swifty converts this data into a JSON object using NSJSONSerialization
+            // SwiftyJSON takes care of all the optional validation that you previously had to code by hand.
+        // 2. Know which keys and indices you want to access.
+        // 3. At end of parsing process, pass .string to retrieve string value, .array for array value, etc
+        // That's it.
     DataManager.getTopAppsDataFromFileWithSuccess { (data) -> Void in
         // Get #1 app name using SwiftyJSON
         let json = JSON(data: data)
