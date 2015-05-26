@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02753C6B19E63FEF00208E21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02753C6A19E63FEF00208E21 /* ViewController.swift */; };
+		232832D31B15211C00C90DEC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232832D21B15211B00C90DEC /* SwiftyJSON.swift */; };
 		9240066419CABECA00371784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240066319CABECA00371784 /* AppDelegate.swift */; };
 		9240066919CABECA00371784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9240066719CABECA00371784 /* Main.storyboard */; };
 		9240066B19CABECA00371784 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9240066A19CABECA00371784 /* Images.xcassets */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		02753C6A19E63FEF00208E21 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		232832D21B15211B00C90DEC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9240065E19CABECA00371784 /* TopApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9240066219CABECA00371784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9240066319CABECA00371784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		9240066019CABECA00371784 /* TopApps */ = {
 			isa = PBXGroup;
 			children = (
+				232832D21B15211B00C90DEC /* SwiftyJSON.swift */,
 				9240068919CABF1F00371784 /* TopApps.json */,
 				9240066319CABECA00371784 /* AppDelegate.swift */,
 				02753C6A19E63FEF00208E21 /* ViewController.swift */,
@@ -221,6 +224,7 @@
 				02753C6B19E63FEF00208E21 /* ViewController.swift in Sources */,
 				9240068619CABF0A00371784 /* AppModel.swift in Sources */,
 				9240066419CABECA00371784 /* AppDelegate.swift in Sources */,
+				232832D31B15211C00C90DEC /* SwiftyJSON.swift in Sources */,
 				9240068719CABF0A00371784 /* DataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
