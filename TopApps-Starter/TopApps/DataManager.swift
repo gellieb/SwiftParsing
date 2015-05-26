@@ -12,6 +12,26 @@ import Foundation
 let TopAppURL = "https://itunes.apple.com/us/rss/topgrossingipadapplications/limit=25/json"
 
 class DataManager {
+    
+    
+    // instead of retrieving local file, using NSURLSession to pull data from iTunes
+        // 1. Call loadDataFromURL. This takes the URL and a completion closure that passes in a NSData object
+        // 2. Make sure data exists using optional binding
+        // 3. Pass data to the success closure as done before.
+    
+    class func getTopAppsDataFromItunesWithSuccess(success: ((iTunesData: NSData) -> Void)) {
+        //1
+        loadDataFromURL(NSURL(string: TopAppURL)!, completion: {(data, error) -> Void in
+            //2
+            if let urlData = data {
+                //3
+                success(iTunesData: urlData)
+            }
+        })
+    }
+    
+    
+    
   
   class func getTopAppsDataFromFileWithSuccess(success: ((data: NSData) -> Void)) {
     //1
