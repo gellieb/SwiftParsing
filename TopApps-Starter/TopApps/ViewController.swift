@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     // Parsing JSON with SwiftyJSON Library --> allows you to eliminate all those nil checks
+    
         // 1. create JSON constant via the JSON() init method and your data object
             // Swifty converts this data into a JSON object using NSJSONSerialization
             // SwiftyJSON takes care of all the optional validation that you previously had to code by hand.
@@ -34,6 +35,28 @@ class ViewController: UIViewController {
         if let appName = json["feed"]["entry"][0]["im:name"]["label"].string {
             println("NSURLSession: \(appName)")
         }
+
+    // Parsing JSON for arrays --> iterates over all apps in the JSON response and creates a model object of AppModel as:
+        
+        //1: Retrieve list of apps with SwiftyJSON
+        if let appArray = json["feed"]["entry"].array {
+            
+            //2: Create a mutable array to hold the objects to be created
+            var apps = [AppModel]()
+            
+            //3: Loop through all the items and create a new instance of AppModel from the JSON data
+            for appDict in appArray {
+                var appName: String? = appDict["im:name"]["label"].string
+                var appURL: String? = appDict["im:image"][0]["label"].string
+                
+                var app = AppModel(name: appName, appStoreURL: appURL)
+                apps.append(app)
+            }
+            
+            //4: Print new objects to the debugger
+            println(apps)
+        }
+        
     }
     
     
