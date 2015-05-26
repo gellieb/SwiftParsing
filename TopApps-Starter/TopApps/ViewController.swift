@@ -29,6 +29,12 @@ class ViewController: UIViewController {
         }
     }
     
+    DataManager.getTopAppsDataFromItunesWithSuccess{ (iTunesData) -> Void in
+        let json = JSON(data: iTunesData)
+        if let appName = json["feed"]["entry"][0]["im:name"]["label"].string {
+            println("NSURLSession: \(appName)")
+        }
+    }
     
     
     // Parsing JSON Native Swift Way
